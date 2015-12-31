@@ -69,6 +69,10 @@ angular.module('stockApp')
             templateUrl: 'views/login.html',
             controller: 'LoginCtrl'
         })
+        .whenAuthenticated('/dashboard', {
+            templateUrl: 'views/dashboard.html',
+            controller: 'DashboardCtrl'
+        })
         .whenAuthenticated('/account', {
             templateUrl: 'views/account.html',
             controller: 'AccountCtrl'

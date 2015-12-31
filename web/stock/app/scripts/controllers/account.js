@@ -8,18 +8,16 @@
  */
 angular.module('stockApp')
     .controller('AccountCtrl', function($scope, user, Auth, Ref, $firebaseObject, $timeout, tempData) {
-        $scope.logout = function() {
+        /*$scope.logout = function() {
             tempData.set('html', 'views/layouts/public.html');
             Auth.$unauth();
-        };
+        };*/
 
         if (Auth.$getAuth()) {
             var user = $scope.user = Auth.$getAuth(),
                 AuthUser = $scope.AuthUser = user[user.provider],
                 profile = $firebaseObject(Ref.child('users/' + user.uid)),
                 document_types = $scope.document_types = [];
-
-                console.log('A ', user)
 
             profile.$bindTo($scope, 'profile');
 
