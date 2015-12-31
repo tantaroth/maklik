@@ -1,12 +1,12 @@
 <!-- Content Header (Page header) -->
 <section class="content-header">
     <h1>
-        Empresas
+        Gastos
         <small>it all starts here</small>
       </h1>
     <ol class="breadcrumb">
         <li><a href="#/dashboard"><i class="fa fa-dashboard"></i> Tablero</a></li>
-        <li class="active">Empresa</li>
+        <li class="active">Gasto</li>
     </ol>
 </section>
 <!-- Main content -->
@@ -56,27 +56,31 @@
                             <form role="form">
                                 <p class="form-group">
                                     <label>Nombre:</label>
-                                    <input type="text" name="company_name" ng-model="form.name" class="form-control" />
+                                    <input type="text" name="expense_name" ng-model="form.name" class="form-control" />
                                 </p>
                                 <p class="form-group">
-                                    <label>Tipo de documento:</label>
-                                    <select name="company_document_type" ng-model="form.document_type" ng-options="item as item.label for item in document_types track by item.id" class="form-control"></select>
+                                    <label>Decripcion:</label>
+                                    <input type="text" name="expense_description" ng-model="form.description" class="form-control" />
                                 </p>
                                 <p class="form-group">
-                                    <label>Numero de documento:</label>
-                                    <input type="text" name="company_document_number" ng-model="form.document_number" class="form-control" />
+                                    <label>Valor a pagar:</label>
+                                    <input type="text" name="expense_value" ng-model="form.value" class="form-control" />
                                 </p>
                                 <p class="form-group">
-                                    <label>Direccion:</label>
-                                    <input type="text" name="company_address" ng-model="form.address" class="form-control" />
+                                    <label>Fecha a pagar:</label>
+                                    <input type="datetime" name="expense_date" ng-model="form.date" class="form-control" />
                                 </p>
                                 <p class="form-group">
-                                    <label>Sitio Web:</label>
-                                    <input type="text" name="company_website" ng-model="form.website" class="form-control" />
-                                </p>
-                                <p class="form-group">
-                                    <label>Telefono(s):</label>
-                                    <textarea name="com/spany_phone" ng-model="form.phone" class="form-control"></textarea>
+                                    <label>Medio de pago:</label>
+                                    <select name="expense_cash" ng-model="form.cash" class="form-control">
+                                        <option value="1">Efectivo</option>
+                                        <option value="1">Cheque</option>
+                                        <option value="1">Tarjeta de Credito</option>
+                                        <option value="1">Tarjeta de Debito</option>
+                                        <option value="1">Otro</option>
+                                    </select>
+                                    <label>Cual otro medio de pago?</label>
+                                    <input type="text" name="expense_other" ng-model="form.other" class="form-control" />
                                 </p>
                             </form>
                         </div>

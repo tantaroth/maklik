@@ -21,8 +21,6 @@ angular.module('stockApp')
 
         profile.$bindTo($scope, 'profile');
 
-        console.log('> Auth: ', AuthGet);
-
         AuthUser = AuthGet[AuthGet.provider];
 
         $scope.logout = function() {

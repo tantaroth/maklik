@@ -1,12 +1,12 @@
 <!-- Content Header (Page header) -->
 <section class="content-header">
     <h1>
-        Empresas
+        Almacenes
         <small>it all starts here</small>
       </h1>
     <ol class="breadcrumb">
         <li><a href="#/dashboard"><i class="fa fa-dashboard"></i> Tablero</a></li>
-        <li class="active">Empresa</li>
+        <li class="active">Almacen</li>
     </ol>
 </section>
 <!-- Main content -->
@@ -56,27 +56,19 @@
                             <form role="form">
                                 <p class="form-group">
                                     <label>Nombre:</label>
-                                    <input type="text" name="company_name" ng-model="form.name" class="form-control" />
-                                </p>
-                                <p class="form-group">
-                                    <label>Tipo de documento:</label>
-                                    <select name="company_document_type" ng-model="form.document_type" ng-options="item as item.label for item in document_types track by item.id" class="form-control"></select>
-                                </p>
-                                <p class="form-group">
-                                    <label>Numero de documento:</label>
-                                    <input type="text" name="company_document_number" ng-model="form.document_number" class="form-control" />
+                                    <input type="text" name="store_name" ng-model="form.name" class="form-control" />
                                 </p>
                                 <p class="form-group">
                                     <label>Direccion:</label>
-                                    <input type="text" name="company_address" ng-model="form.address" class="form-control" />
-                                </p>
-                                <p class="form-group">
-                                    <label>Sitio Web:</label>
-                                    <input type="text" name="company_website" ng-model="form.website" class="form-control" />
+                                    <input type="text" name="store_address" ng-model="form.address" class="form-control" />
                                 </p>
                                 <p class="form-group">
                                     <label>Telefono(s):</label>
-                                    <textarea name="com/spany_phone" ng-model="form.phone" class="form-control"></textarea>
+                                    <textarea name="store_phone" ng-model="form.phone" class="form-control" ></textarea>
+                                </p>
+                                <p class="form-group">
+                                    <label>Detalles:</label>
+                                    <textarea name="store_phone" ng-model="form.phone" class="form-control" ></textarea>
                                 </p>
                             </form>
                         </div>

@@ -1,12 +1,12 @@
 <!-- Content Header (Page header) -->
 <section class="content-header">
     <h1>
-        Empresas
+        Descuentos
         <small>it all starts here</small>
       </h1>
     <ol class="breadcrumb">
         <li><a href="#/dashboard"><i class="fa fa-dashboard"></i> Tablero</a></li>
-        <li class="active">Empresa</li>
+        <li class="active">Descuento</li>
     </ol>
 </section>
 <!-- Main content -->
@@ -55,28 +55,27 @@
                         <div class="col-md-12">
                             <form role="form">
                                 <p class="form-group">
+                                    <label>Fecha:</label> <br>
+                                    <small>Fecha en que se hara efectivo el descuento.</small>
+                                    <input type="date" name="discount_date_start" ng-model="form.date_start" class="form-control" />
+                                    <input type="date" name="discount_date_end" ng-model="form.date_end" class="form-control" />
+                                </p>
+                                <p class="form-group">
                                     <label>Nombre:</label>
-                                    <input type="text" name="company_name" ng-model="form.name" class="form-control" />
+                                    <input type="text" name="discount_name" ng-model="form.name" class="form-control" />
                                 </p>
                                 <p class="form-group">
-                                    <label>Tipo de documento:</label>
-                                    <select name="company_document_type" ng-model="form.document_type" ng-options="item as item.label for item in document_types track by item.id" class="form-control"></select>
+                                    <label>Porcentaje:</label>
+                                    <input type="number" name="discount_percentage" ng-model="form.percentage" maxlength="3" class="form-control" />
                                 </p>
                                 <p class="form-group">
-                                    <label>Numero de documento:</label>
-                                    <input type="text" name="company_document_number" ng-model="form.document_number" class="form-control" />
-                                </p>
-                                <p class="form-group">
-                                    <label>Direccion:</label>
-                                    <input type="text" name="company_address" ng-model="form.address" class="form-control" />
-                                </p>
-                                <p class="form-group">
-                                    <label>Sitio Web:</label>
-                                    <input type="text" name="company_website" ng-model="form.website" class="form-control" />
-                                </p>
-                                <p class="form-group">
-                                    <label>Telefono(s):</label>
-                                    <textarea name="com/spany_phone" ng-model="form.phone" class="form-control"></textarea>
+                                    <label>Productos:</label>
+                                    <select name="discount_products" ng-model="form.products" class="form-control" multiple >
+                                        <option value="1">Camisa Polo S</option>
+                                        <option value="1">Camisa Polo M</option>
+                                        <option value="1">Llillos</option>
+                                        <option value="1">Boxer</option>
+                                    </select>
                                 </p>
                             </form>
                         </div>

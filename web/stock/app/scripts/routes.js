@@ -81,6 +81,44 @@ angular.module('stockApp')
             templateUrl: 'views/company.html',
             controller: 'CompanyCtrl'
         })
+        .whenAuthenticated('/user', {
+            templateUrl: 'views/user.html',
+            controller: 'UserCtrl'
+        })
+        .whenAuthenticated('/role', {
+            templateUrl: 'views/role.html',
+            controller: 'RoleCtrl'
+        })
+        .whenAuthenticated('/store', {
+            templateUrl: 'views/store.html'
+        })
+        .whenAuthenticated('/tax', {
+            templateUrl: 'views/tax.html'
+        })
+        .whenAuthenticated('/product', {
+            templateUrl: 'views/product/index.html'
+        })
+        .whenAuthenticated('/product/merge', {
+            templateUrl: 'views/product/merge.html'
+        })
+        .whenAuthenticated('/product/discount', {
+            templateUrl: 'views/product/discount.html'
+        })
+        .whenAuthenticated('/product/promo', {
+            templateUrl: 'views/product/promo.html'
+        })
+        .whenAuthenticated('/stock', {
+            templateUrl: 'views/stock/index.html'
+        })
+        .whenAuthenticated('/stock/return', {
+            templateUrl: 'views/stock/return.html'
+        })
+        .whenAuthenticated('/stock/moviment', {
+            templateUrl: 'views/stock/moviment.html'
+        })
+        .whenAuthenticated('/expense', {
+            templateUrl: 'views/expense.html'
+        })
         .otherwise({
             redirectTo: '/'
         });
